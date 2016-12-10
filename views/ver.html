@@ -1,0 +1,23 @@
+$def with(result)
+<form name="main" method="POST" class="form">
+    $for row in result:
+    <table class="table">
+        <th>Datos de los productos</th>
+        <th>Informacion</th>
+        <tr>
+            <td>Nombre del Producto</td>
+            <td>$row.Nombre</td>
+        </tr>
+        <tr>
+            <td>Cantidad de productos</td>
+            <td>$row.Cantidad</td>
+        </tr>
+        <tr>
+            <td>Marca Comercial</td>
+            <td>$row.Marca</td>
+        </tr>
+        <tr>
+            <td>Precio del Producto</td>
+            <td>$row.Precio</td>
+        </tr>
+    </table>

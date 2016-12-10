@@ -1,0 +1,28 @@
+$def with(result)
+<table class="table">
+    <th>Nombre</th>
+    <th>Cantidad</th>
+    <th>Agregar</th>
+    <th>Ver</th>
+    <th>Modificar</th>
+    <th>Eliminar</th>
+    $for row in result:
+    <tr>
+        <td>$row.Nombre</td>
+        <td>$row.Cantidad</td>
+        <td>
+            <form name="main" method="POST" class=" form">
+                <input id="botonAgregar" type="submit" value="Agregar"/>
+            </form>
+        </td>
+        <td>
+            <a href="/ver/$row.id"><input id="botonVer" type="submit" value="Ver"/></a>
+        </td>
+        <td>
+            <a href="/editar/$row.id"><input id="botonEditar" type="submit" value="Editar"/></a>
+        </td>
+        <td>
+            <a href="/eliminar/$row.id"><input id="botonEliminar" type="submit" value="Eliminar"></a>
+        </td>
+    </tr>
+</table>

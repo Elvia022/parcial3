@@ -1,0 +1,12 @@
+$def with(data)
+<table class="table">
+    <th>Periodo</th>
+    <th>Entidad Federativa</th>
+    <th>Sexo</th>
+    $for row in data:
+    <tr>
+        <td>$row['Periodo']</td>
+        <td>$row['Entidad_Federativa']</td>
+        <td>$row['Sexo']</td>
+    </tr>
+</table>
